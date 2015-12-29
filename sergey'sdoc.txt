@@ -4,7 +4,7 @@ I did add and modify some files of the b2evolution framework.
 As my first code, I change the skin named "skins/bootstrap_main_skin".
 So you can my gift part in the main front-page.
 
-My first code is my gift for you. When you click that gift,you can see three team member's name.
+My first code is my little gift for you. When you click that gift,you can see three team member's name.
 
 I did following. Of cource, I think I consider of the rule in b2evolution.
 1. added file named "front.main.php" in "skins/bootstrp_main_skin/".
