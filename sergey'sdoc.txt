@@ -1,0 +1,27 @@
+Hello B2evolution team!
+I'm a Sergey.
+I did add and modify some files of the b2evolution framework.
+As my first code, I change the skin named "skins/bootstrap_main_skin".
+So you can my gift part in the main front-page.
+
+My first code is my gift for you. When you click that gift,you can see three team member's name.
+
+I did following. Of cource, I think I consider of the rule in b2evolution.
+1. added file named "front.main.php" in "skins/bootstrp_main_skin/".
+	I think this is main skin when the post type requested is "front",$dist=front. 
+	If this file named "front.main.php" isn't in proper skins folder, the framework seems to call file named "index.main.php";
+	So I creat new "front.main.php" file in that skin folder.
+    And then to get members name, I used the query and execute that by using get_results() function of $DB golbal object in your framework. 
+2. added some css in style.css file.
+    This is needed to fix css property of my sergey_gift_div in "front.main.php".
+
+3. creat the js folder, and then add gift_core.js file in that.
+    This file is needed to handle my "sergey_gift_div" in jQuery javascript.
+	The function is to flip two face divs.
+4. change file named "_skin.class.php" and add snippet code.
+    Because this is needed to load my javascript file named "gift_core.js".
+	I add the code in display_init() hook.
+
+I hope it gives a little satisfaction to you.
+Best regard.
+Sergey.
