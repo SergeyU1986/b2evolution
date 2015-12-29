@@ -157,7 +157,8 @@ body.pictured .container.main_page_wrapper {
 
 /**
  *	Sergey's gift_div css
- *
+ *      @for: sergey_gift_div
+ *      @function: flip
  */
 body #sergey_gift_div{
 	position: absolute;
