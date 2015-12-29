@@ -18,7 +18,6 @@ if( version_compare( $app_version, '6.4' ) < 0 )
 // This is the main template; it may be used to display very different things.
 // Do inits depending on current $disp:
 skin_init( $disp );
-//require_js( './js/gift_core.js', 'relative' );
 
 // -------------------------- HTML HEADER INCLUDED HERE --------------------------
 skin_include( '_html_header.inc.php', array(
@@ -44,7 +43,7 @@ echo '</div>';
 
 /**
  * sergey's data rows for display
- * @return : Array() - team member's info, limit 3 ;
+ * @return : Array($stdClass) - team member's info, limit 3 ;
 **/
 global $DB;
 $sql = "select concat(user_firstname,' ',user_lastname) uname from evo_users limit 3";
@@ -54,7 +53,7 @@ $members = $DB->get_results($sql);
 
 
 <div class="container main_page_wrapper">
-<!-- start sergey's gift div for b2evolution team-->
+<!-- ===================== start sergey's gift div for b2evolution team ======================-->
 <div id="sergey_gift_div">
     <div id="container">
 		<div class="front">
@@ -75,7 +74,7 @@ $members = $DB->get_results($sql);
 		</div>
 	</div>
 </div>
-<!-- end sergey's gift div-->
+<!--======================== end sergey's gift div ====================================-->
 <div class="row">	
 	<div class="col-md-12 front_main_area">
 
