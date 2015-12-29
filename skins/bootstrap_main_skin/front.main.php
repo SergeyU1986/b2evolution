@@ -18,7 +18,7 @@ if( version_compare( $app_version, '6.4' ) < 0 )
 // This is the main template; it may be used to display very different things.
 // Do inits depending on current $disp:
 skin_init( $disp );
-
+//require_js( './js/gift_core.js', 'relative' );
 
 // -------------------------- HTML HEADER INCLUDED HERE --------------------------
 skin_include( '_html_header.inc.php', array(
@@ -41,14 +41,42 @@ if( ! empty( $bg_image ) && file_exists( $media_path.$bg_image ) )
 	echo '<img src="'.$media_url.$bg_image.'" />';
 }
 echo '</div>';
+
+/**
+ * sergey's data rows for display
+ * @return : Array() - team member's info, limit 3 ;
+**/
+global $DB;
+$sql = "select concat(user_firstname,' ',user_lastname) uname from evo_users limit 3";
+$members = $DB->get_results($sql);
+/*------------end getting users---------------*/
 ?>
 
 
 <div class="container main_page_wrapper">
-
-
-<div class="row">
-
+<!-- start sergey's gift div for b2evolution team-->
+<div id="sergey_gift_div">
+    <div id="container">
+		<div class="front">
+			<div class="sergey_header">Sergey's Gift for B2evoloution</div>
+			<div class="sergey_welcome">Wonderful Team!</div>
+		</div>
+		<div class="back">
+			<div class="sergey_content">
+				<div class="sergey_header">B2evoultion Team Members</div>
+				<div class="sergey_welcome" style="padding-top:10px">
+				<?php
+				foreach($members as $member){
+					echo "<p>".$member->uname."</p>";
+				}
+				?>
+				</div>
+			</div>		
+		</div>
+	</div>
+</div>
+<!-- end sergey's gift div-->
+<div class="row">	
 	<div class="col-md-12 front_main_area">
 
 		<main><!-- This is were a link like "Jump to main content" would land -->

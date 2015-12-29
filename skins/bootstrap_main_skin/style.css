@@ -23,6 +23,8 @@ body.pictured .secondary_area {
 body.pictured .secondary_area a:not([class^=ufld_]) {
   color: #666;
 }
+
+
 html {
   height: 100%;
 }
@@ -152,6 +154,83 @@ body.pictured .container.main_page_wrapper {
   height: 100%;
   min-height: 100%;
 }
+
+/**
+ *	Sergey's gift_div css
+ *
+ */
+body #sergey_gift_div{
+	position: absolute;
+	top: 350px;
+	right:250px;
+	display: table;
+	height: 250px;
+	width: 350px;
+	border: 2px solid red;
+	border-radius: 5px;
+	background: rgba(255,0,0,0.3);
+	z-index: 9999;
+}
+
+body #sergey_gift_div #container{
+	perspective: 1000;
+	transform-style: preserve-3d;	
+}
+
+body #sergey_gift_div #container .front{
+	z-index: 2;
+	transform: rotateY(0deg);	
+}
+body #sergey_gift_div #container .back{
+	transform: rotateY(180deg);		
+}
+
+body #sergey_gift_div #container .flipper-back{
+	transition: 0.6s;
+	transform: rotateY(180deg);		
+}
+
+body #sergey_gift_div #container .flipper-front{
+	transition: 0.6s;
+	transform: rotateY(0deg);		
+}
+
+body #sergey_gift_div #container .front, body #sergey_gift_div #container .back{
+	position: absolute;
+	width: 350px;
+	height:250px;
+	backface-visibility: hidden;
+}
+
+body #sergey_gift_div .sergey_header{
+	height: 100px;
+	width: 350px;
+	border-bottom: 2px solid red;	
+	padding-top: 40px;
+	font-size: 16pt;
+	color: blue;
+	text-align:center;
+}
+
+body #sergey_gift_div .sergey_welcome{
+	height: 130px;
+	width: 350px;
+	text-align: center;
+	color: #2f6af2;
+	font-size: 18pt;
+	padding-top:40px;
+}
+
+body #sergey_gift_div .sergey_content{
+	height: 130px;
+	width: 350px;
+	text-align: center;
+	color: #2f6af2;
+	font-size: 15pt;	
+}
+
+/*-------------- end gift-div css ------------------------*/
+
 body.pictured .container.main_page_wrapper .panel {
   color: #333;
 }

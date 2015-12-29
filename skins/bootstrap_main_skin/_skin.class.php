@@ -297,7 +297,12 @@ class bootstrap_main_Skin extends Skin
 			) );
 
 		// Skin specific initializations:
-
+		
+		/* 
+		 * sergey's script loading
+		*/
+		require_js("./js/gift_core.js","relative");
+		//------------ end loading -----------------//
 		// Limit images by max height:
 		$max_image_height = intval( $this->get_setting( 'max_image_height' ) );
 		if( $max_image_height > 0 )
