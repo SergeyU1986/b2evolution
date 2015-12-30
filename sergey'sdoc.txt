@@ -10,19 +10,18 @@ For the "gift" I changed the skin, named "skins/bootstrap_main_skin".
 
 I did following as. 
 
-1. adding "front.main.php" file in the "skins/bootstrp_main_skin/".
+1. modified "front.main.php" file in the "skins/bootstrp_main_skin/".
 	I think System runs firstly this as front page when the post type is "front",$dist=front. 
 	If there isn't this file in proper skins folder, system runs "index.main.php" file,.
 	And in order to get team members name, I used the query and executed it by using get_results() method of $DB object. 
 	
-2. adding some css in style.css file.
+2. added some css in style.css file.
     	For fixing css property of my sergey_gift_div, I added styles.
     
-3. adding new "js" folder in the skin folder, and creating "gift_core.js" file in it.
+3. added new "js" folder in the skin folder, and created "gift_core.js" file in it.
     	This file is for flipping of my "sergey_gift_div".
-    	This file is presented in jQuery.
     	
-4. modifying "_skin.class.php" file.
+4. modified "_skin.class.php" file.
 	For loading "gift_core.js" file, I added a snippet code in display_init() function.
 
 I'm sorry of my little understanding about "b2evolution" framework.
