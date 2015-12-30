@@ -8,7 +8,7 @@ When you click "gift",you can see three team member's name.
 
 For the "gift" I changed the skin, named "skins/bootstrap_main_skin".
 
-I did following as. 
+I did the following. 
 
 1. modified "front.main.php" file in the "skins/bootstrp_main_skin/".
 	I think System runs firstly this as front page when the post type is "front",$dist=front. 
